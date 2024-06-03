@@ -74,10 +74,14 @@ HttpRequest request = HttpRequest.newBuilder()
             Assert.assertNotNull(auxiliar);
             Assert.assertEquals("ba1e5703-334c-4a8e-9fe1-c26549d9af81",auxiliar);
         }
+
         if(nomecampo.equalsIgnoreCase("toCustomerId")){
             String auxiliar = genericoAction._JsonPath(response.body().toString(),"toCustomerId");
             Assert.assertNotNull(auxiliar);
             Assert.assertEquals("3c22ffd1-7236-44b1-aa6c-430b221864a0",auxiliar);
         }
+
+
+
     }
 }
