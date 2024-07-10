@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = "@validarcampos",
+        tags = "@pedidocorreiospost",
         features = "src/test/java/jornadas",
         glue = "jornadas",
         monochrome = true,

@@ -1,2 +1,4 @@
-package jornadas.generico.actions;public class TokenActionCorreios {
+package jornadas.generico.actions;
+
+public class TokenActionCorreios {
 }

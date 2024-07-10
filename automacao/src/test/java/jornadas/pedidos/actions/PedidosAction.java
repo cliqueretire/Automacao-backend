@@ -16,7 +16,8 @@ public class PedidosAction {
     public PedidosAction() throws Exception {
         tokenAction = new TokenAction();
     }
-    public HttpResponse runAPIPedidosDelivery(Method method, String company, String toCustomer, String ebox, String type)throws Exception {
+    public HttpResponse
+    runAPIPedidosDelivery(Method method, String company, String toCustomer, String ebox, String type)throws Exception {
         HttpClient client = HttpClient.newHttpClient();
         String json = new StringBuilder()
                 .append("{\n" +
@@ -80,8 +81,6 @@ HttpRequest request = HttpRequest.newBuilder()
             Assert.assertNotNull(auxiliar);
             Assert.assertEquals("3c22ffd1-7236-44b1-aa6c-430b221864a0",auxiliar);
         }
-
-
 
     }
 }

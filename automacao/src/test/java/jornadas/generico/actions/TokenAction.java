@@ -33,4 +33,24 @@ public class TokenAction {
         String token = response.body();
         return token;
     }
+    public String runAPItokencorreios( String email, String password)throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+        String json = new StringBuilder()
+                .append("{\n" +
+                        "    \"email\": \""+email+"\",\n" +
+                        "    \"password\": \""+password+"\"\n" +
+                        "}").toString();
+
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://services-stg.cliqueretire.com.br/correios/v1/authenticate"))
+                .POST(HttpRequest.BodyPublishers.ofString(json))
+                .header("content-type","application/json")
+                .build();
+
+        HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
+        String token = response.body();
+        return token;
+    }
+
 }
